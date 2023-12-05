@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url(peakpx.jpg);
+    background-size: cover;
+    font-family: 'Poppins',sans-serif;
+    overflow-x: 0;
+    overflow-y: 0;
+}
+p{
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    align-items:row wrap;
+}
+
+.flex{
+    display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Barlow Condensed";
+  
+}
+.container {
+    max-width: 1350px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+  box-shadow: 3px 3px 10px lightslategray;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  position: relative;
+}
+
+.main-nav-container-flex {
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.logo img {
+    width: 90px;
+    margin-right: 1350px;
+    align-items: flex-start;
+
+}
+
+.nav-links{
+    gap: 20px;
+    position: absolute;
+  margin-right: 500px;
+}
+.nav-links ul{
+    gap: 25px;
+}
+.hover-link {
+    cursor: pointer;
+    
+}
+.hover-link:hover{
+    color: var(--secondary-text-color);
+}
+
+.hover-link:active{
+    color: red;
+}
+
+.search-bar-flex{
+    height: 32px;
+    gap: 10px;
+    position: absolute;
+    margin-left: 1000px;
+}
+
+.news-input{
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+}
+
+.search-button{
+    background-color: blue;
+    color: #f6e9e9;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+
+}
+
+.search-button:hover {
+    background-color: rgb(247, 20, 73);
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section .scroll{
+    width: 100%;
+    display: flex;
+}
+
+section .scroll div{
+color: #000;
+font-size: 4em;
+background: #fff;
+white-space: nowrap;
+font-weight: 900;
+text-transform: uppercase;
+animation: animate 40s linear infinite;
+animation-delay: -40s;
+}
+section .scroll div:nth-child(2){
+animation: animate2 40s linear infinite;
+animation-delay: -20s;
+}
+
+section .scroll div span{
+-webkit-text-stroke: 2px #000;
+color: transparent;
+}
+@keyframes animate {
+   0%{
+    transform: translateX(100%);
+   } 
+   100%{
+    transform: translateX(-100%);
+   } 
+}
+@keyframes animate2 {
+    0%{
+     transform: translateX(0);
+    } 
+    100%{
+     transform: translateX(-200%);
+    } 
+ }
+
+section .scroll.text-1{
+    transform: rotate(30deg) translateY(200px) translateX(-200px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+section .scroll.text-2{
+    transform: rotate(-25deg) translateY(120px) translateX(-200px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+section .scroll.text-3{
+    transform: rotate(25deg) translateY(300px) translateX(-200px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+section .scroll.text-4{
+    transform: rotate(-25deg) translateY(120px) translateX(-200px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+section .scroll.text-5{
+    transform: rotate(10deg) translateY(-50px) translateX(-200px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}

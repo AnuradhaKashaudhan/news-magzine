@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900| Playfair+Display:400,700,900'); 
+
+body {
+margin: 0;
+padding: 0;
+}
+
+* {
+box-sizing: border-box;
+}
+
+.cover {
+background-image: url("magazine.jpg");
+background-size: cover;
+background-position: center;
+color: #ddd4d4;
+font-family: 'Lato', sans-serif;
+padding: 2em;
+}
+
+
+.cover-content {
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.top-section {
+background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+color: #166bb5;
+padding: 2em;
+margin-bottom: 4em;
+}
+
+
+.top-section-content{
+display: flex;
+justify-content: flex-end;
+flex-wrap: wrap;
+}
+
+
+.top-section .content-preview{
+    flex: 0 1 230px;
+}
+
+@media screen and (max-width: 520px) { 
+.top-section .content-preview {
+	 flex-grow: 1;
+    }
+}
+
+.logo {
+display: none;
+}
+
+.title {
+display: flex;
+align-items: last baseline; 
+margin-bottom: 2em;
+flex-wrap: wrap;
+}
+
+.title-text {
+font-family: 'Playfair Display', serif;
+font-weight: 900;
+font-size: 3em;
+flex-grow: 1;
+Letter-spacing: 0.025em;
+ margin-bottom: 0.33em;
+}
+
+@media screen and (min-width: 520px) { .title-text {
+font-size: 4em;
+  }
+}
+
+@media screen and (min-width: 700px) { .title-text {
+font-size: 6em;
+  }
+}
+
+.title-details {
+font-weight: 400;
+}
+
+.title a {
+color: inherit;
+text-decoration: inherit;
+}
+
+.title a:hover {
+color: #f3efeb;
+}
+
+.content-preview {
+padding: 0.5em;
+justify-self: start;
+}
+
+@media screen and (min-width: 700px) {
+  .content-preview--left {
+	text-align: right;
+	justify-self: end;
+ }
+}
+
+.content-preview-cat .content-preview-title {
+     font-family: 'Playfair Display', serif;
+      font-size: 1.2em;
+}
+
+.content-preview-cat {
+text-decoration: underline;
+margin-bottom: 0.25em;
+}
+
+
+.content-preview-title {
+font-weight: 700; margin-bottom: 0.5em;
+}
+
+.content-preview-excerpt {
+text-transform: lowercase; font-weight: 300;
+Letter-spacing: 0.3px;
+}
+
+
+.lower-section {
+    background: url(magazines\ background\ black.jpg);
+    background-size: 500px;
+     margin: 0 1em;
+    grid-template-columns: 10% 2fr 10px 2fr 10%; grid-auto-flow: row dense;
+}
+
+@media screen and (min-width: 700px) {
+.lower-section { display: grid;
+margin-top: 8em;
+  }
+}
+
+
+.lower-section .content-preview {
+max-width: 240px;
+padding: 1em;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+
+.lower-section .content-preview--top {
+margin-top: 2em;
+}
+
+@media screen and (min-width: 700px) {
+    .lower-section {
+         display: grid;
+margin-top: 8em;
+  }
+}
+
+.lower-section .content-preview {
+
+max-width: 240px;
+padding: 1em;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+.lower-section .content-preview--top {
+margin-top: 2em;
+}
+
+.lower-section .content-preview--bottom {
+     margin-bottom: 2.5em;
+}
+.headline {
+      grid-row: 2;
+   grid-column: 1 / -1;
+     display: flex;
+}
+
+.boxed-headline {
+text-align: center;
+ padding: 1em;
+border: 1px solid #f5efef;
+ position: relative;
+  flex: 1 0 auto;
+text-transform: uppercase;
+ Letter-spacing: 0.4em;
+Line-height: 1.3;
+font-weight: 900;
+max-width: 100%;
+margin-left: 5px;
+width: 400px;
+}
+
+.boxed-headline:before {
+content: '';
+position: absolute;
+ border: inherit;
+  Left: 0.5em;
+right: 0.5em;
+top: -0.5em;
+ bottom: -0.5em;
+}
+
+.line {
+position: relative;
+}
+
+@media screen and (max-width: 520px) {
+.line {
+display: none;
+    }
+}
+I
+.line:before {
+  content: "";
+   height: 0.8em;
+   width: 0.8em;
+   background: #f8f4f4;
+   display: block;
+   position: absolute;
+}
+
+.line:after {
+   content:"";
+    border-color: #f0e7e7;
+   position: absolute;
+   display: block;
+}
+
+.line--vertical {
+grid-column: 3; display: none;
+}
+
+
+@media screen and (min-width: 700px) {
+.line--vertical {
+display: block;
+  }
+}
+
+.line--vertical:after {
+  Left: 50%;
+  top: 0;
+  bottom: 0;
+border-left: 1px solid;
+}
+
+.line--vertical:before {
+Left: 50%;
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%);
+}
+
+.line--bottom:before {
+     bottom: 0;
+}
+.line--horizontal { 
+    flex: 1 0 30px;
+}
+
+.line--horizontal:after { 
+    Left: 0;
+   right: 0; 
+   top: 50%;
+border-top: 1px solid;
+}
+
+.line--horizontal:before {
+top: 50%;
+-webkit-transform: translateY(-50%);
+ transform: translateY(-50%);}
+
+.line--right:before {
+right: 0;
+}
